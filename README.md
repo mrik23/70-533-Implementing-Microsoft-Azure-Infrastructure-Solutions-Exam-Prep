@@ -28,13 +28,13 @@ Even if the exam has been refreshed in late 2016, so far I haven’t found much 
 
 **Deploy Web Apps**
 
-*   [define deployment slots](https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-staged-publishing#add-a-deployment-slot)
-*   [roll back deployments](https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-staged-publishing#to-rollback-a-production-app-after-swap)
-*   implement pre and post deployment actions _(not found related content)_
-*   create, configure, and deploy packages _(ambiguous)_
-*   [create App Service plans](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview#create-an-app-service-plan-or-use-existing-one)
-*   [migrate Web Apps between App Service plans](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview#move-an-app-to-a-different-app-service-plan)
-*   create a Web App within an App Service plan
+-[ ]   [define deployment slots](https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-staged-publishing#add-a-deployment-slot)
+-[ ]   [roll back deployments](https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-staged-publishing#to-rollback-a-production-app-after-swap)
+-[ ]   implement pre and post deployment actions _(not found related content)_
+-[ ]   create, configure, and deploy packages _(ambiguous)_
+-[ ]   [create App Service plans](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview#create-an-app-service-plan-or-use-existing-one)
+-[ ]   [migrate Web Apps between App Service plans](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview#move-an-app-to-a-different-app-service-plan)
+-[ ]   create a Web App within an App Service plan
 
 Video: [demo1](https://www.youtube.com/watch?v=68Q3C5m9gu4) [demo2](https://youtu.be/Yp6x43gORY8)
 
