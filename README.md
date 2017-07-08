@@ -273,7 +273,6 @@ _Check also my_ [_ARM templates 101_](https://medium.com/@zaab_it/azure-resource
 [Preparing to pass Azure 70–533](http://www.andresnava.com/2017/02/preparing-to-pass-azure-70-533/) by Andres Nava
 
 
-
 * * *
 
 _Good study!_
