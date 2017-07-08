@@ -9,7 +9,7 @@ The exam is now aligned on the [new Azure Portal](https://portal.azure.com) and 
 
 Even if the exam has been refreshed in late 2016, so far I haven’t found much resources covering the new exam objectives. Most third party online courses seem to be still based on the old model and not updated to match the new exam objectives. That will probably change soon, but for now I don’t really see other alternatives than studying directly from the official Azure documentation and free online video courses and demo from Microsoft.
 
-Feel free to fork this repo if you want to checklist your progress.
+Open an issue to create your own progress tracking list.
 
 * * *
 
