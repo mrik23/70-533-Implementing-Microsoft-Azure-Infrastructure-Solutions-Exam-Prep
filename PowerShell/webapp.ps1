@@ -1,9 +1,15 @@
-Import-Module AzureRM
+#Azure PowerShell v2
+#Check documentation https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2?view=azureadps-2.0
 
+Import-Module AzureRM
 Login-AzureRmAccount
 
-New-AzureRmResourceGroup -Name 'webapp-70533-rg' -Location 'southeast asia'
+$resourceGroup = New-AzureRmResourceGroup -Name "myResourceGroup" -Location "East US"
 
-New-AzureRmAppServicePlan -Location "southeast asia" -Tier Free -ResourceGroupName "webapp-70533-rg" -Name "webapp-70533-asp"
+get-command *appservice*
 
-New-AzureRmWebApp -ResourceGroupName webapp-70533-rg -Name "webapp-70533" -Location "southeast asia" -AppServicePlan "webapp-70533-asp"
+$appServicePlan = New-AzureRmAppServicePlan -Location $resourceGroup.Location -Tier Free `
+                -ResourceGroupName $resourceGroup.ResourceGroupName -Name "myAppServicePlan"
+
+$webApp = New-AzureRmWebApp -name "myWebApp" -ResourceGroupName $resourceGroup.ResourceGroupName `
+        -Location "southeast asia" -AppServicePlan "webapp-70533-asp"
