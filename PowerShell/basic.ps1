@@ -5,11 +5,9 @@ Import-Module AzureRM
 $credential = Get-Credential
 Login-AzureRmAccount -Credential $credential
 
-#Get the list of all Azure RM cmdlets
+#List all Azure RM cmdlets
 get-command *azurerm*
 
-get-command *location*
-
-#Get all Azure Location (region)
+#List all Azure Location (region)
 Get-AzureRmLocation
 

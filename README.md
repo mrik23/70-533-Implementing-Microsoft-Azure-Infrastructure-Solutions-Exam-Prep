@@ -77,7 +77,7 @@ Video: [demo1](https://youtu.be/cDNOTiBRwzA) [demo2](https://www.youtube.com/wat
 
 **Deploy workloads on Azure Resource Manager (ARM) virtual machines (VMs)**
 
-- [ ] identify workloads that can and cannot be deployed
+- [ ] identify [workloads](https://support.microsoft.com/en-us/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines) that can and cannot be deployed ([Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/endorsed-distros))
 - [ ] run workloads, including [Microsoft](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/overview) and [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/overview)
 - [ ] create VMs [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/creation-choices) / [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/creation-choices)
 - [ ] connect to a [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon) / [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys) VM
@@ -277,4 +277,4 @@ _Check also my_ [_ARM templates 101_](https://medium.com/@zaab_it/azure-resource
 
 _Good study!_
 
-PS: I’m still missing some links and some might not be so accurate, please comment to contribute or pull request.
+PS: Some links are missing and some might not be so accurate, please comment, sumbit issue or pull request.
