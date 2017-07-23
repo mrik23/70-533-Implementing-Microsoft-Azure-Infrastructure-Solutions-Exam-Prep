@@ -92,8 +92,8 @@ Video: [demo1](https://youtu.be/cDNOTiBRwzA) [demo2](https://www.youtube.com/wat
 
 - [ ] configure disk caching _(should be host caching, clear instructions not found in documentation)_
 - [ ] [plan storage capacity](https://docs.microsoft.com/en-us/azure/storage/storage-about-disks-and-vhds-windows)
-- [ ] [configure operating system disk redundancy](https://docs.microsoft.com/en-us/azure/storage/storage-redundancy) (not sure [managed disks](https://docs.microsoft.com/en-us/azure/storage/storage-managed-disks-overview) are part of the exam)
-- [ ] [configure shared storage using Azure File service](https://docs.microsoft.com/en-us/azure/storage/storage-dotnet-how-to-use-files)
+- [ ] [configure operating system disk redundancy](https://docs.microsoft.com/en-us/azure/storage/storage-redundancy) _(not sure [managed disks](https://docs.microsoft.com/en-us/azure/storage/storage-managed-disks-overview) are part of the exam)_
+- [ ] [configure shared storage using Azure File service](https://docs.microsoft.com/en-us/azure/storage/storage-file-how-to-use-files-windows) _([Linux](https://docs.microsoft.com/en-us/azure/storage/storage-how-to-use-files-linux))_
 - [ ] [configure geo-replication](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/regions-and-availability#storage-availability)
 - [ ] [encrypt disks](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption)
 - [ ] [implement ARM VMs with Standard and Premium Storage](https://docs.microsoft.com/en-us/azure/storage/storage-about-disks-and-vhds-windows?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json#types-of-disks)
