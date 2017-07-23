@@ -49,7 +49,7 @@ Video: [demo1](https://youtu.be/cDNOTiBRwzA) [demo2](https://www.youtube.com/wat
 
 **Deploy workloads on Azure Resource Manager (ARM) virtual machines (VMs)**
 
-- [ ] identify workloads that can and cannot be deployed
+- [ ] identify [workloads](https://support.microsoft.com/en-us/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines) that can and cannot be deployed ([Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/endorsed-distros))
 - [ ] run workloads, including [Microsoft](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/overview) and [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/overview)
 - [ ] create VMs [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/creation-choices) / [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/creation-choices)
 - [ ] connect to a [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon) / [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys) VM
@@ -64,8 +64,8 @@ Video: [demo1](https://youtu.be/cDNOTiBRwzA) [demo2](https://www.youtube.com/wat
 
 - [ ] configure disk caching _(should be host caching, clear instructions not found in documentation)_
 - [ ] [plan storage capacity](https://docs.microsoft.com/en-us/azure/storage/storage-about-disks-and-vhds-windows)
-- [ ] [configure operating system disk redundancy](https://docs.microsoft.com/en-us/azure/storage/storage-redundancy) (not sure [managed disks](https://docs.microsoft.com/en-us/azure/storage/storage-managed-disks-overview) are part of the exam)
-- [ ] [configure shared storage using Azure File service](https://docs.microsoft.com/en-us/azure/storage/storage-dotnet-how-to-use-files)
+- [ ] [configure operating system disk redundancy](https://docs.microsoft.com/en-us/azure/storage/storage-redundancy) _(not sure [managed disks](https://docs.microsoft.com/en-us/azure/storage/storage-managed-disks-overview) are part of the exam)_
+- [ ] [configure shared storage using Azure File service](https://docs.microsoft.com/en-us/azure/storage/storage-file-how-to-use-files-windows) _([Linux](https://docs.microsoft.com/en-us/azure/storage/storage-how-to-use-files-linux))_
 - [ ] [configure geo-replication](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/regions-and-availability#storage-availability)
 - [ ] [encrypt disks](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption)
 - [ ] [implement ARM VMs with Standard and Premium Storage](https://docs.microsoft.com/en-us/azure/storage/storage-about-disks-and-vhds-windows?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json#types-of-disks)
@@ -209,5 +209,3 @@ _Check also my_ [_ARM templates 101_](https://medium.com/@zaab_it/azure-resource
 - [ ] [implement Azure role-based access control (RBAC) standard roles](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles)
 - [ ] [design Azure RBAC custom roles](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles)
 
-
-* * *
