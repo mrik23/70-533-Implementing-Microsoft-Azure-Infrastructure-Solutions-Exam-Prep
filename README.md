@@ -150,7 +150,7 @@ Video: [demo1](https://youtu.be/cDNOTiBRwzA) [demo2](https://www.youtube.com/wat
 
 **Implement recovery services**
 
-- [ ] [create a backup vault](https://docs.microsoft.com/en-us/azure/backup/backup-try-azure-backup-in-10-mins#create-a-recovery-services-vault) _(backup vault seems deprecated in favor of recovery services vault)_
+- [ ] [create a backup vault](https://docs.microsoft.com/en-us/azure/backup/backup-azure-vms-first-look-arm#create-a-recovery-services-vault-for-a-vm) _(recovery services vault in Azure RM)_
 - [ ] [deploy a backup agent](https://docs.microsoft.com/en-us/azure/backup/backup-configure-vault#install-and-register-the-agent)
 - [ ] [back up](https://docs.microsoft.com/en-us/azure/backup/backup-configure-vault#create-the-backup-policy) and [restore data](https://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-windows-server#recover-data-to-the-same-machine)
 
