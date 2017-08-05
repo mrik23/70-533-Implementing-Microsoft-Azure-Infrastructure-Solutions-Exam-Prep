@@ -47,6 +47,7 @@ $webAppSettings.Add("SECRET", "password")
 $webApp = Set-AzureRmWebApp -ResourceGroupName $resourceGroup.ResourceGroupName -Name $webApp.Name `
                 -HttpLoggingEnabled $true -AppSettings $webAppSettings
 
-get-command *settings* -Module AzureRM
-
-Get-AzureRmResourceProvider | Select-Object ProviderNamespace
+<#
+    The resource group can be deleted to remove all resources deployed when done.
+#>
+#Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force

@@ -67,3 +67,10 @@ $vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize $vmSize -AvailabilitySet
 
 New-AzureRmVM -ResourceGroupName $resourceGroup.ResourceGroupName -Location $resourceGroup.Location -VM $vmConfig
 
+#Get the virtual machine created
+$vm = Get-AzureRmVM -ResourceGroupName $resourceGroup.ResourceGroupName -Name $vmName
+
+<#
+    The resource group can be deleted to remove all resources deployed when done.
+#>
+#Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force

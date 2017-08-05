@@ -101,3 +101,7 @@ Add-AzureRmAutoscaleSetting -Location $resourceGroup.Location -Name "MyScaleVMSS
                             -ResourceGroup $resourceGroup.ResourceGroupName `
                             -TargetResourceId $vmss.id -AutoscaleProfiles $profile1
 
+<#
+    The resource group can be deleted to remove all resources deployed when done.
+#>
+#Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force

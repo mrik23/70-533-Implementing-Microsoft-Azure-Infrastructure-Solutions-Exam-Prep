@@ -43,10 +43,12 @@ $db = Set-AzureRmSqlDatabase -DatabaseName $db.DatabaseName -RequestedServiceObj
 $dbs = Get-AzureRmSqlDatabase -ServerName $sqlServer.ServerName -ResourceGroupName $resourceGroup.ResourceGroupName
 
 #Remove all databases
-$dbs | Remove-AzureRmSqlDatabase -ServerName $sqlServer.ServerName -ResourceGroupName $resourceGroup.ResourceGroupName
+#$dbs | Remove-AzureRmSqlDatabase -ServerName $sqlServer.ServerName -ResourceGroupName $resourceGroup.ResourceGroupName
 
 #Remove the SQL server
-Remove-AzureRmSqlServer -ServerName $sqlServer.ServerName -ResourceGroupName $resourceGroup.ResourceGroupName
+#Remove-AzureRmSqlServer -ServerName $sqlServer.ServerName -ResourceGroupName $resourceGroup.ResourceGroupName
 
-#Remove the resource group
-Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force
+<#
+    The resource group can be deleted to remove all resources deployed when done.
+#>
+#Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force

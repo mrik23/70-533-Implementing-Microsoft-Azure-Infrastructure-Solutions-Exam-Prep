@@ -109,7 +109,11 @@ Get-AzureRmVMDiskEncryptionStatus -ResourceGroupName $resourceGroup.ResourceGrou
 <#  
     The additional data is not yet formated so BitLocker encryption is not enabled.
     When the data disk is formated, simply reboot the VM to enable BitLocker.
-    Alternatively, a custom script could be used to prep the disk before enabling the encryption.
-
-    Restart-AzureRmVM -Name $vm.Name -ResourceGroupName $resourceGroup.ResourceGroupName
+    Alternatively, a custom script could be used to prep the disk before enabling the encryption.  
 #>
+#Restart-AzureRmVM -Name $vm.Name -ResourceGroupName $resourceGroup.ResourceGroupName
+
+<#
+    The resource group can be deleted to remove all resources deployed when done.
+#>
+#Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force

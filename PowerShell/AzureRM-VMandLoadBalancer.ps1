@@ -18,8 +18,8 @@ $privateIP2 = "10.0.1.20"
 $dnsNameLB = ("myLoadBalancer" + (Get-Random -Maximum 9999).ToString()).ToLower()
 $loadBalancerName = "myLoadBalancer"
 $nsgName = "myNetworkSecurityGroup" + (Get-Random -Maximum 99).ToString()
-$vmName1 = "myVM" + (Get-Random -Maximum 999).ToString()
-$vmName2 = "myVM" + (Get-Random -Maximum 999).ToString()
+$vmName1 = "myVM" + (Get-Random -Maximum 9999).ToString()
+$vmName2 = "myVM" + (Get-Random -Maximum 9999).ToString()
 $nicName1 = $vmName1.ToLower() + "_nic01"
 $nicName2 = $vmName2.ToLower() + "_nic01"
 $vmSize = "Standard_A1" #Find VM size options with 'Get-AzureRmVMSize -location $location'
@@ -190,3 +190,8 @@ $lb | Add-AzureRmLoadBalancerRuleConfig -Name "lbRule2" -FrontendIPConfiguration
                 -Protocol "Tcp" -FrontendPort 443 -BackendPort 443 -BackendAddressPool $lb.BackendAddressPools[0] -Probe $healthProbe
 $lb | Set-AzureRmLoadBalancer
 #>
+
+<#
+    The resource group can be deleted to remove all resources deployed when done.
+#>
+#Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force

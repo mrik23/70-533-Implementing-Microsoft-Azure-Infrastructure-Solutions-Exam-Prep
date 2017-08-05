@@ -77,5 +77,7 @@ Set-AzureStorageBlobContent -Container $container.Name -File ".\test.txt" -Blob 
 #Download file from blob storage container
 Get-AzureStorageBlobContent -Container $container.Name -Blob "test.txt" -Destination ".\test-download.txt" -Context $blobStorageContext
 
-#Remove the resource group
-Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force
+<#
+    The resource group can be deleted to remove all resources deployed when done.
+#>
+#Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force

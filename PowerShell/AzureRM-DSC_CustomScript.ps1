@@ -111,3 +111,8 @@ Set-AzureRmVMCustomScriptExtension -ResourceGroupName $resourceGroup.ResourceGro
     -VMName $vm.Name -Location $resourceGroup.Location `
     -FileUri $scriptBlob.ICloudBlob.StorageUri.PrimaryUri.AbsoluteUri `
     -Run 'myScript.ps1' -Name myScriptExtension
+
+<#
+    The resource group can be deleted to remove all resources deployed when done.
+#>
+#Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force
