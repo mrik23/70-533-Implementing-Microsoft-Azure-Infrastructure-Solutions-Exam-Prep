@@ -8,8 +8,11 @@ Login-AzureRmAccount -Credential $credential
 #Set variables
 $location = "eastus" #Find the choice of location with 'Get-AzureRmLocation | select location'
 $rgName = "myResourceGroup" + (Get-Random -Maximum 99).ToString()
+$aadAppDisplayName = "Keyvault Encryption App " + (Get-Random -Maximum 9999).ToString()
+$aadAppHomePage = "https://encryptionapp" + (Get-Random -Maximum 9999).ToString()
+$aadAppURI = $aadAppHomePage
 $aadClientSecret = “5trong1sYourS3cr3t”
-$keyVaultName = "myKeyVault" + (Get-Random -Maximum 99).ToString()
+$keyVaultName = "myKeyVault" + (Get-Random -Maximum 999999).ToString()
 $keyEncryptionKeyName = "myKEK" + (Get-Random -Maximum 9999).ToString()
 $subnetName = "mySubnet"  + (Get-Random -Maximum 99).ToString()
 $subnetAddress = "10.0.1.0/24"
@@ -33,9 +36,11 @@ $cred = New-Object System.Management.Automation.PSCredential ("myAdminUser", $se
 $resourceGroup = New-AzureRmResourceGroup -Name $rgName -Location $location
 
 #Create an Azure AD application
-$azureAdApplication = New-AzureRmADApplication -DisplayName "Keyvault Encryption App (Do Not Delete)" `
-                    -HomePage "https://encryptionapp" -IdentifierUris "https://encryptionapp" `
+$azureAdApplication = New-AzureRmADApplication -DisplayName $aadAppDisplayName `
+                    -HomePage $aadAppHomePage -IdentifierUris $aadAppURI `
                     -Password $aadClientSecret
+
+#Create a service principal for the Azure AD application
 $servicePrincipal = New-AzureRmADServicePrincipal –ApplicationId $azureAdApplication.ApplicationId
 
 #Create a Key Vault
@@ -95,6 +100,9 @@ New-AzureRmVM -ResourceGroupName $resourceGroup.ResourceGroupName -Location $res
 #Get the virtual machine created
 $vm = Get-AzureRmVM -ResourceGroupName $resourceGroup.ResourceGroupName -Name $vmName
 
+#Wait 5 minutes before enabling encryption
+Start-Sleep -Seconds 300
+
 #Enable disk encryption on the VM for all disks
 Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $resourceGroup.ResourceGroupName -VMName $vm.Name `
                                     -AadClientID $servicePrincipal.ApplicationId -AadClientSecret $aadClientSecret `
@@ -117,3 +125,8 @@ Get-AzureRmVMDiskEncryptionStatus -ResourceGroupName $resourceGroup.ResourceGrou
     The resource group can be deleted to remove all resources deployed when done.
 #>
 #Remove-AzureRmResourceGroup -Name $resourceGroup.ResourceGroupName -Force
+
+<#
+    The Azure AD application can also removed. That will also removed the service principal.
+#>
+#Remove-AzureRmADApplication -ObjectId $azureAdApplication.ObjectId -Force
