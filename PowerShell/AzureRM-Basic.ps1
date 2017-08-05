@@ -6,8 +6,12 @@ $credential = Get-Credential
 Login-AzureRmAccount -Credential $credential
 
 #List all Azure RM cmdlets
-get-command *azurerm*
+get-command * -Module AzureRm
 
+#List all Azure RM VM cmdlets
+get-command * -Module AzureRM.Compute
+
+#List all Azure SQL Database cmdlets
 get-command * -Module AzureRM.Sql
 
 #List all Azure Location (region)
