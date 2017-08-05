@@ -8,6 +8,8 @@ Login-AzureRmAccount -Credential $credential
 #List all Azure RM cmdlets
 get-command *azurerm*
 
+get-command * -Module AzureRM.Sql
+
 #List all Azure Location (region)
 Get-AzureRmLocation
 

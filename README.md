@@ -112,9 +112,9 @@ Video: [demo1](https://youtu.be/cDNOTiBRwzA) [demo2](https://www.youtube.com/wat
 
 **Scale ARM VMs**
 
-- [ ] [scale up and scale down VM sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/resize-vm)
-- [ ] [deploy ARM VM Scale Sets (VMSS)](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/vmss-powershell-creating) [Linux](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) _(_[_VMSS doc_](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)_)_
-- [ ] configure ARM VMSS auto-scale [Linux](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-linux-autoscale) / [Windows](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-windows-autoscale)
+- [ ] scale up and scale down VM sizes [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-vm#resize-a-vm) / [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/change-vm-size)
+- [ ] deploy ARM [VM Scale Sets](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview) [Windows](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-create-vmss) / [Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-create-vmss)
+- [ ] configure ARM [VMSS auto-scale](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview) [Windows](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-windows-autoscale) / [Linux](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-linux-autoscale)
 
 #### Design and implement a storage strategy
 
@@ -139,7 +139,7 @@ Video: [demo1](https://youtu.be/cDNOTiBRwzA) [demo2](https://www.youtube.com/wat
 **Configure diagnostics, monitoring, and analytics**
 
 - [ ] [set retention policies and logging levels](https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/enabling-storage-logging-and-accessing-log-data)
-- [ ] [analyze logs](https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/enabling-storage-logging-and-accessing-log-data#a-namefindingyourstoragelogginglogdataa-finding-your-storage-logging-log-data)
+- [ ] [analyze logs](https://docs.microsoft.com/en-us/rest/api/storageservices/Storage-Analytics-Log-Format)
 
 **Implement Azure SQL Databases**
 

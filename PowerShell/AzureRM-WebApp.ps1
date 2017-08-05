@@ -9,7 +9,7 @@ $location = "eastus" #Find the choice of location with 'Get-AzureRmLocation | se
 $resourceGroupName = "myResourceGroup" + (Get-Random -Maximum 99).ToString()
 $appServicePlanName = "myAppServicePlan" + (Get-Random -Maximum 99).ToString()
 $webAppName = "myapp" + (Get-Random -Maximum 99999).ToString()
-$tier = "Basic" #Choice between Free, Shared, Basic, Standard or Premium
+$tier = "Standard" #Choice between Free, Shared, Basic, Standard or Premium
 $size = "Small" #Choice between Small, Medium, Large , ExtraLarge (Only for Premium tier). No choice for free and shared tiers.
 
 #Create the resource group for the app service plan and web app

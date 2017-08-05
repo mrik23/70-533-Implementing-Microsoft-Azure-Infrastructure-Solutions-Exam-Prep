@@ -28,9 +28,8 @@ $sqlServer = New-AzureRmSqlServer -ServerName $sqlServerName -Location $resource
             -ResourceGroupName $resourceGroup.ResourceGroupName -SqlAdministratorCredentials $sqlServerCredentials
 
 # Create a server firewall rule that allows access from the specified IP range
-$serverfirewallrule = New-AzureRmSqlServerFirewallRule -ResourceGroupName $resourceGroup.ResourceGroupName`
-    -ServerName $sqlServer.ServerName `
-    -FirewallRuleName $firewallRuleName -StartIpAddress $startip -EndIpAddress $endip
+$serverfirewallrule = New-AzureRmSqlServerFirewallRule -ResourceGroupName $resourceGroup.ResourceGroupName `
+-ServerName $sqlServer.ServerName -FirewallRuleName $firewallRuleName -StartIpAddress $startip -EndIpAddress $endip
 
 #Create the SQL database
 $db = New-AzureRmSqlDatabase -DatabaseName $dbName -Edition $serviceTier -RequestedServiceObjectiveName $performanceLevel `
