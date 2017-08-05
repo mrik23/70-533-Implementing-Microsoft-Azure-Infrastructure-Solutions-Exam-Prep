@@ -5,6 +5,11 @@ Import-Module AzureRM
 $credential = Get-Credential
 Login-AzureRmAccount -Credential $credential
 
+#Check the version of AzureRM module
+Get-Module AzureRM
+
+Update-Module AzureRM
+
 #List all Azure RM cmdlets
 get-command * -Module AzureRm
 
@@ -16,4 +21,12 @@ get-command * -Module AzureRM.Sql
 
 #List all Azure Location (region)
 Get-AzureRmLocation
+
+#List all resource providers enabled
+Get-AzureRmResourceProvider -ListAvailable
+
+#Register a resource provider namespace
+Register-AzureRmResourceProvider -ProviderNamespace "Microsoft.KeyVault"
+
+
 
