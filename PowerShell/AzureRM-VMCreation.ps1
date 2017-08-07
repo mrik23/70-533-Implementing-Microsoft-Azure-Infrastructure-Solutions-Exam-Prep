@@ -5,8 +5,11 @@ Import-Module AzureRM
 $credential = Get-Credential
 Login-AzureRmAccount -Credential $credential
 
+#Get all cmdlets related to Azure Compute
+#Get-Command * -Module AzureRM.Compute
+
 #Set variables
-$location = "eastus" #Find the choice of location with 'Get-AzureRmLocation | select location'
+$location = "southeastasia" #Find the choice of location with 'Get-AzureRmLocation | select location'
 $rgName = "myResourceGroup" + (Get-Random -Maximum 99).ToString()
 $subnetName = "mySubnet"  + (Get-Random -Maximum 99).ToString()
 $subnetAddress = "10.0.1.0/24"
@@ -14,7 +17,7 @@ $vnetName = "myVNET" + (Get-Random -Maximum 99).ToString()
 $vnetAddress = "10.0.0.0/16"
 $nsgName = "myNetworkSecurityGroup"  + (Get-Random -Maximum 99).ToString()
 $vmName = "myVM" + (Get-Random -Maximum 999).ToString()
-$dataDiskName = $vmName.ToLower() + "_datadisk01"
+$dataDiskName = $vmName.ToLower() + "_datadisk01-" + (Get-Random -Maximum 99999).ToString()
 $availabilitySetName = "myAS" + (Get-Random -Maximum 99).ToString()
 $nicName = $vmName.ToLower() + "_nic01"
 $vmSize = "Standard_A1" #Find VM size options with 'Get-AzureRmVMSize -location $location'
@@ -55,7 +58,9 @@ $nic = New-AzureRmNetworkInterface -Name $nicName -ResourceGroupName $resourceGr
         -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $pip.Id -NetworkSecurityGroupId $nsg.Id
 
 #Create a data disk for the VM
-$dataDiskConfig = New-AzureRmDiskConfig -AccountType "StandardLRS" -Location $resourceGroup.Location -CreateOption Empty -DiskSizeGB 32
+$dataDiskConfig = New-AzureRmDiskConfig -AccountType "StandardLRS" -Location $resourceGroup.Location -CreateOption Empty `
+                -DiskSizeGB 32
+
 $dataDisk = New-AzureRmDisk -DiskName $dataDiskName -Disk $dataDiskConfig -ResourceGroupName $resourceGroup.ResourceGroupName
 
 # Create a virtual machine configuration

@@ -144,7 +144,7 @@ Video: [demo1](https://youtu.be/cDNOTiBRwzA) [demo2](https://www.youtube.com/wat
 **Implement Azure SQL Databases**
 
 - [ ] [choose the appropriate database tier and performance level](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers)
-- [ ] [configure point-in-time recovery](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups), [geo-replication](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview), and [data sync](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-sql-data-sync)
+- [ ] [configure point-in-time recovery](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups), [geo-replication](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview), and [data sync](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-sync-data)
 - [ ] [import](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-import-portal) and [export](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-export) data and schema
 - [ ] [design a scaling strategy](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-scale-introduction)
 
