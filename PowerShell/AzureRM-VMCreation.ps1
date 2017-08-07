@@ -9,7 +9,7 @@ Login-AzureRmAccount -Credential $credential
 #Get-Command * -Module AzureRM.Compute
 
 #Set variables
-$location = "southeastasia" #Find the choice of location with 'Get-AzureRmLocation | select location'
+$location = "eastus" #Find the choice of location with 'Get-AzureRmLocation | select location'
 $rgName = "myResourceGroup" + (Get-Random -Maximum 99).ToString()
 $subnetName = "mySubnet"  + (Get-Random -Maximum 99).ToString()
 $subnetAddress = "10.0.1.0/24"
